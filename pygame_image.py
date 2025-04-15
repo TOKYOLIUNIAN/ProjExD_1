@@ -10,6 +10,7 @@ def main():
     screen = pg.display.set_mode((800, 600))       # 创建窗口，大小800x600
     clock  = pg.time.Clock()                       # 设置时钟
     bg_img = pg.image.load("fig/pg_bg.jpg")        # 加载背景图像
+    bg_img2 = pg.transform.flip(bg_img, True, False)#练习8
     kk_img = pg.image.load("fig/3.png")           # 加载角色图像
     kk_img = pg.transform.flip(kk_img, True,False) # 练习2后半
     tmr = 0                                         # 计时器初始化
