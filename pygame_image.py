@@ -19,9 +19,10 @@ def main():
         for event in pg.event.get():               # 处理事件
             if event.type == pg.QUIT:  return             # 如果点击关闭窗口
                                             # 退出主循环
-        x = tmr
+        x = tmr % 3200  #练习6
         screen.blit(bg_img, [-x, 0])     #练习6  
-        screen.blit(bg_img, [-x+1600,0])     #练习7    # 绘制背景图像
+        screen.blit(bg_img2, [-x+1600,0])     #练习7   
+        screen.blit(bg_img, [-x+3200,0])     #练习7   
         screen.blit(kk_img, [300, 200])  #练习4   
         pg.display.update()                        # 更新显示内容
         tmr += 1                                   
